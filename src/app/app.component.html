@@ -1,0 +1,35 @@
+
+<my-app-detail (verifyClicked)="verifyClicked($event)"></my-app-detail>
+<div *ngIf="show">
+<wj-flex-grid #flex         
+              [itemsSource]="treeData"
+              [allowResizing]="'None'"
+              (cellEditEnding)="onCellEditEnding($event, flex)"
+            >
+    <wj-flex-grid-column [isReadOnly]="false"
+                         [binding]="'name'"
+                         [width]="'*'">
+        <ng-template wjFlexGridCellTemplate
+                     [cellType]="'Cell'"
+                     let-cell="cell">
+             {{cell.item.name}}
+        </ng-template>
+    </wj-flex-grid-column>
+    <wj-flex-grid-column [isReadOnly]="false"
+                         [binding]="'length'"
+                         [width]="'*'"
+                         [align]="'center'">
+        <ng-template wjFlexGridCellTemplate
+                     [cellType]="'Cell'"
+                     let-cell="cell">
+             {{cell.item.length}}
+        </ng-template>
+    </wj-flex-grid-column>
+   
+</wj-flex-grid>
+</div>
+ 
+<li>Click on Theories</li>
+<li>Child grid is visible with template until Reset and OK buttons </li>
+<li>Now click on the check box on first row</li>
+<li>Obsereve that the buttons will not be visible after the new row appends in </li>
