@@ -28,6 +28,20 @@ export class Global {
         xsrfCredentialsrequired: true,
         brokenWebService: false
     };
+    export interface DevParameters {
+    angularExtraChecksDevMode: boolean;
+    mockData: boolean;
+    xsrfCredentialsrequired: boolean;
+    embedMode?: boolean;
+    route?: string;
+    user?: string;
+    userid?: number;
+    restServerRoot?: string;
+    ngrxstoreDevMode: boolean;
+    brand?: string;
+    product?: string;
+    brokenWebService?: boolean;
+}
 
     constructor() {
         // get the search portion of the url (everything after the ? including the ?)
