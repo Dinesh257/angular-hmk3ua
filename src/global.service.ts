@@ -159,7 +159,7 @@ export class Global {
 
     /**
      * Check if app should be in embed mode
-     * If the app is in embed mode the sei-header and sei-footer will be hidden in the app.
+     * If the app is in embed mode the -header and -footer will be hidden in the app.
      * @return True if application is in embed mode
      */
     isEmbedMode(): boolean {
